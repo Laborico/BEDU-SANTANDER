@@ -1,0 +1,71 @@
+{
+    "comentario":"¿Qué comentarios ha hecho Greg Powell?",
+    {
+
+        filter: {
+         name: 'Greg Powell'
+        },
+        project: {
+         text: 1,
+         movie_id:1,
+         _id: 0
+        }
+    
+    }
+}
+
+{
+    "comentario":"¿Qué comentarios han hecho Greg Powell o Mercedes Tyler?",
+    {
+        
+        filter: {
+         $or: [
+          {
+           name: 'Greg Powell'
+          },
+          {
+           name: 'Mercedes Tyler'
+          }
+         ]
+        },
+        project: {
+         name: 1,
+         text: 1,
+         movie_id: 1,
+         _id: 0
+        }
+    
+    }
+}
+
+{
+    "comentario":"¿Cuál es el máximo número de comentarios en una película?",
+    {
+
+        project: {
+         num_mflix_comments: 1,
+         _id: 0
+        },
+        sort: {
+         num_mflix_comments: -1
+        },
+        limit: 1
+    
+    }
+}
+
+{
+    "comentario":"¿Cuál es título de las cinco películas más comentadas?",
+    {
+
+        project: {
+         title: 1,
+         _id: 0
+        },
+        sort: {
+         num_mflix_comments: -1
+        },
+        limit: 5
+    
+    }
+}
