@@ -1,0 +1,43 @@
+{
+    "comentario":"Propiedades que no permitan fiestas.",
+    {
+
+        filter: {
+         house_rules: RegExp('no parties', i)
+        }
+    
+    }
+}
+
+{
+    "comentario": "Propiedades que admitan mascotas.",
+    {
+
+        filter: {
+         house_rules: RegExp('pets allowed', i)
+        }
+    
+    }
+}
+
+{
+    "comentario":"Propiedades que no permitan fumadores.",
+    {
+
+        filter: {
+         house_rules: RegExp('no smoking', i)
+        }
+    
+    }
+}
+
+{
+    "comentario":"Propiedades que no permitan fiestas ni fumadores.",
+    {
+
+        filter: {
+         house_rules: RegExp('no parties|no smoking', i)
+        }
+    
+    }
+}
