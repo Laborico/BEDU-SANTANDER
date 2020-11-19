@@ -1,11 +1,9 @@
 {
     "comentario":"Propiedades que no permitan fiestas.",
     {
-
-        filter: {
-         house_rules: RegExp('no parties', i)
-        }
-    
+            filter: {
+             house_rules: /not? part(ies|y)/i
+            }     
     }
 }
 
@@ -14,7 +12,7 @@
     {
 
         filter: {
-         house_rules: RegExp('pets allowed', i)
+         house_rules: /pets allowed/i
         }
     
     }
@@ -25,7 +23,7 @@
     {
 
         filter: {
-         house_rules: RegExp('no smoking', i)
+         house_rules: /no smoking/i
         }
     
     }
@@ -36,7 +34,7 @@
     {
 
         filter: {
-         house_rules: RegExp('no parties|no smoking', i)
+         house_rules: /no parties|no smoking/i
         }
     
     }

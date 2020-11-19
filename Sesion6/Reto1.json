@@ -1,0 +1,27 @@
+{
+  "comentario":"Con base en el ejemplo 1, modifica el agrupamiento para que muestre el costo promedio por habitación por país de las propiedades de tipo casa.",
+  
+  [{$match: {
+    property_type: 'House'
+  }}, {$match: {
+    bedrooms: {
+      $gte: 1
+    }
+  }}, {$addFields: {
+    costoRecamara: {
+      $divide: [
+        '$price',
+        '$bedrooms'
+      ]
+    }
+  }}, {$group: {
+    _id: '$address.country',
+    Costo_Promedio: {
+      $avg: '$costoRecamara'
+    }
+  }}, {$project: {
+    Costo_Promedio: 1,
+    _id: 1
+  }}]
+
+}

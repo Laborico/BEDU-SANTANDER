@@ -11,7 +11,7 @@
          },
          amenities: {
           $in: [
-           RegExp('Ethernet', i)
+           /Ethernet/i
           ]
          },
          'address.country': 'Brazil'
