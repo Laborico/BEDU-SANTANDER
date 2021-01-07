@@ -8,5 +8,3 @@ El objetivo del programa es que el estudiante obtenga la capacidad de tomar deci
 
 # Objetivo del Repositorio
 Tener un registro de las clases tomadas al igual que de los retos realizdos.
-
-*Nota: Las sesiones y los retos son de la Fase 1, una vez concluya la fase, actualizare el repositorio para tener un mejor orden*
